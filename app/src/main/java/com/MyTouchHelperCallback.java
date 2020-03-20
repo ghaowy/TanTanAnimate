@@ -7,7 +7,7 @@ import android.support.v7.widget.helper.ItemTouchHelper;
 import android.util.Log;
 import android.view.View;
 
-import com.imprexion.tantananimate.config.DemoAdapter;
+import com.imprexion.tantananimate.config.DemoTanTanAdapter;
 import com.imprexion.tantananimate.config.SwipeBean;
 
 import java.util.List;
@@ -20,7 +20,7 @@ import java.util.List;
 public class MyTouchHelperCallback extends ItemTouchHelper.SimpleCallback {
 
     private static final int DEFAULT_SPACE = 40;
-    private DemoAdapter adapter;
+    private DemoTanTanAdapter adapter;
     private List<SwipeBean> mDatas;
     private float mV;
     private int mItemCount;
@@ -28,7 +28,7 @@ public class MyTouchHelperCallback extends ItemTouchHelper.SimpleCallback {
     private int mTranslateY;
 
 
-    public MyTouchHelperCallback(DemoAdapter adapter, List<SwipeBean> beans) {
+    public MyTouchHelperCallback(DemoTanTanAdapter adapter, List<SwipeBean> beans) {
         super(0, ItemTouchHelper.LEFT | ItemTouchHelper.RIGHT);
         this.adapter = adapter;
         this.mDatas = beans;
